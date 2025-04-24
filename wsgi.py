@@ -1,9 +1,10 @@
 # WSGI обертка для FastAPI приложения
 import uvicorn
+from asgi2wsgi import Asgi2Wsgi
 from app.main import app
 
-# Для WSGI серверов
-application = app
+# Адаптируем FastAPI (ASGI) под WSGI
+application = Asgi2Wsgi(app)
 
 # Для непосредственного запуска этого файла
 if __name__ == "__main__":

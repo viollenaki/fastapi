@@ -1,5 +1,6 @@
-from pydantic import BaseModel, ConfigDict
-from typing import Optional, List
+from typing import Optional
+from pydantic import BaseModel
+from pydantic.config import ConfigDict  # Правильный импорт ConfigDict
 
 
 class ItemBase(BaseModel):
